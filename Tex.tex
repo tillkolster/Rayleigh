@@ -175,7 +175,8 @@ To measure the Rayleigh-scattering, in this experiment a cavity-ring-down-spectr
 \label{fig:set-up}
 \end{figure}
 The cavity-ring-down-spectrometer is made of two spherical mirrors and a tube, which can be evacuated. A laser-beam is introduced into the cavity and may be reflected 
-several times. The reflectance of the mirrors is at about $R=99.98 \%$, so each time the beam hits one of the mirrors about $0.02\%$ of the light is 
+several times, to maximize the length of interaction with the medium in the cavity. This way, scattering with a very small number of particles can be measured. 
+The reflectance of the mirrors is at about $R=99.98 \%$, so each time the beam hits one of the mirrors about $0.02\%$ of the light is 
 transmitted. Behind one of the mirrors is a detector which measures the transmitted part of the beam. The signal intensity $I$ which is recorded this way is 
 decreasing exponentially with the time $t$. This is caused by two different mechanisms: Scattering and reflection:
 \begin{align}
@@ -185,11 +186,17 @@ where $I_0$ is the starting intensity and $\tau_0$ the damping by reflection. It
 \begin{align}
 \tau_0 &= \frac{L}{c(1-R)},
 \end{align}
-with $L$ the length of the cavity. 
+with $L$ the length of the cavity. This is the damping, when the cavity is evacuated. If a gas is introduced, we get:
 \begin{align}
 \tau(t) &= \frac{L}{c(1-R(\lambda) + \beta(\lambda)L)}
 \end{align}
+By comparison of the damping constant in the evacuated and the non-evacuated case, the coefficient $\beta$ can be calculated. 
 
+\begin{figure}[b]
+\includegraphics[width = .48 \textwidth]{images/aufbau.pdf}
+\caption{Set-up of the experiment \citep{wiki}}
+\label{fig:experiment}
+\end{figure}
 
 \newpage
 \bibliographystyle{unsrtnat}
