@@ -169,6 +169,26 @@ With this scattering-cross-section it is easy to get the scattering factor  $\be
 \section{Set-Up}
 
 To measure the Rayleigh-scattering, in this experiment a cavity-ring-down-spectrometer ist used. 
+\begin{figure}[h]
+\includegraphics[width=.48 \textwidth]{images/crds.pdf}
+\caption{Schematic set-up of a cavity-ring-down-spectrometer \cite{wiki}}
+\label{fig:set-up}
+\end{figure}
+The cavity-ring-down-spectrometer is made of two spherical mirrors and a tube, which can be evacuated. A laser-beam is introduced into the cavity and may be reflected 
+several times. The reflectance of the mirrors is at about $R=99.98 \%$, so each time the beam hits one of the mirrors about $0.02\%$ of the light is 
+transmitted. Behind one of the mirrors is a detector which measures the transmitted part of the beam. The signal intensity $I$ which is recorded this way is 
+decreasing exponentially with the time $t$. This is caused by two different mechanisms: Scattering and reflection:
+\begin{align}
+I(t) &= I_0 e^{- t \left ( \beta c + \frac{1}{\tau_0} \right )},
+\end{align}
+where $I_0$ is the starting intensity and $\tau_0$ the damping by reflection. It can be expressed the following way:
+\begin{align}
+\tau_0 &= \frac{L}{c(1-R)},
+\end{align}
+with $L$ the length of the cavity. 
+\begin{align}
+\tau(t) &= \frac{L}{c(1-R(\lambda) + \beta(\lambda)L)}
+\end{align}
 
 
 \newpage
