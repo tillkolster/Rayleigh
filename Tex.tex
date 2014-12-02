@@ -130,7 +130,7 @@ Tutor: Dr. Andrey Pivtsov
 \parbox{0.8\linewidth}{%
 \textit{This experiment is done within the scope of the advanced lab course for Bachelor Students at Freie Universität Berlin.
 It should give an experimental introduction to Rayleigh scattering processes, the Scattering-Ring-Down Spectroscopy and should
-give a better understanding of Rayleigh scattering phenomen in nature.
+give a better understanding of Rayleigh scattering phenomenon in nature.
 }}
 
 
@@ -138,10 +138,37 @@ give a better understanding of Rayleigh scattering phenomen in nature.
 \end{titlepage}
 
 
-\section{Physikalische Grundlagen}
-\subsection{Rayleigh-Scattering}
-Rayleigh Scattering is
+\section{Theoretical Principles}
 
+Rayleigh Scattering is a type of elastic scattering of electromagnetic waves at particles, which are significantly smaller than the wavelength of the photon. 
+Rayleigh-scattering can be explained by the Mie-theory, which explains the dependence of the scattering-process from the wavelength. 
+
+If there is a collision of an electromagnetic wave with an atom, the atom will be subject of a change of the electromagnetic field produced by the photon. 
+This change will be sinusoidal and hence the atom will resonate. Therefore, the atom can be described as a dipole. 
+The electric and magnetic dipole field can be described the following way\cite{griffiths}:
+\begin{align}
+\vec{E}(\vec{r},t) &= -\frac{\mu_0 p_0 \omega^2}{4 \pi}  \frac{\sin\theta}{r} \cos \left ( \omega \left (t-\frac{r}{c}\right ) \right )\hat{e}_{\theta} \\
+\vec{B}(\vec{r},t) &= -\frac{\mu_0 p_0 \omega^2}{4 \pi}  \frac{\sin\theta}{r} \cos \left ( \omega \left (t-\frac{r}{c}\right ) \right )\hat{e}_{\phi},
+\end{align}
+where $\omega$ is the dipole-frequency and $p_0$ the dipole-moment. 
+The probability that a scattering process will take can be described by the scattering cross-section $\sigma$:
+\begin{align}
+\sigma(\nu) &= \frac{8 }{3} \pi \frac{e^2}{m_e c^2} \frac{\nu^4}{\omega^4},
+\end{align}
+where $\nu$ is the frequency of the wave. Since (in our case) we have oscillating atoms, $\omega \ll \nu$, because $\lambda \gg$ size of the atom. 
+We may replace $\nu= \nicefrac{c}{\lambda}$ to get the dependence of the wavelength. 
+In the case of several atoms $N$ and the resulting refraction-index $n$ we can rewrite $\sigma$ as:
+\begin{align}
+\sigma (\lambda) &= \frac{8 \pi (n^2 -1)^2}{3 N^2 \lambda^4}
+\end{align}
+With this scattering-cross-section it is easy to get the scattering factor  $\beta$:
+\begin{align}
+\beta &= N \sigma = \frac{8 \pi (n^2 -1)^2}{3 N \lambda^4}
+\end{align}
+
+\section{Set-Up}
+
+To measure the Rayleigh-scattering, in this experiment a cavity-ring-down-spectrometer ist used. 
 
 
 \newpage
