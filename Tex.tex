@@ -137,7 +137,7 @@ give a better understanding of Rayleigh scattering phenomenon in nature.
 \end{center}
 \end{titlepage}
 
-
+Introduction
 \section{Theoretical Principles}
 
 Rayleigh Scattering is a type of elastic scattering of electromagnetic waves at particles, which are significantly smaller than the wavelength of the photon. 
@@ -166,8 +166,8 @@ With this scattering-cross-section it is easy to get the scattering factor  $\be
 \beta &= N \sigma = \frac{8 \pi (n^2 -1)^2}{3 N \lambda^4}
 \label{eq:betatheo}
 \end{align}
-With the dependence of $\lambda^4$ the colors of the sky can be explained: Taking a sunset or sunrise it can be observed that the sky appears red in the direction of the sun and blue in other directions. This is because sunlight gets scatterd while passing the atmosphere and especially the troposphere. As photons with larger $\lambda$ have a lower cross-section and therefore a lower probability to get scatterd, more of these photons arrive on the direct way from the sun to the earth as their more energetic collegues. These more energetic photons with smaller $\lambda$ have a higher probability to get scatterd and arrive at the observer on the earth especially in the indirect way and turn the sky blue.
-\section{Cavity Ring-Down Spectroscopy and Set-Up}
+With the dependence of $\lambda^4$ the colors of the sky can be explained: Taking a sunset or sunrise it can be observed that the sky appears red in the direction of the sun and blue in other directions. This is because sunlight gets scattered while passing the atmosphere and especially the troposphere. As photons with larger $\lambda$ have a lower cross-section and therefore a lower probability to get scattered, more of these photons arrive on the direct way from the sun to the earth as the more energetic ones. These more energetic photons with smaller $\lambda$ have a higher probability to get scattered and arrive at the observer on the earth especially in the indirect way and turn the sky blue.
+\section{Cavity Ring-Down Spectroscopy}
 
 To measure the Rayleigh-scattering, in this experiment a cavity-ring-down-spectrometer ist used. 
 \begin{figure}[h]
@@ -193,25 +193,27 @@ with $L$ the length of the cavity. This is the damping, when the cavity is evacu
 \tau(t) &= \frac{L}{c(1-R(\lambda) + \beta(\lambda)L)}
 \end{align}
 By comparison of the damping constant in the evacuated and the non-evacuated case, the coefficient $\beta$ can be calculated. 
-
-\begin{figure}[b]
+\section{Set-up}
+To measure the Rayleigh scattering we had a set-up as follows:
+\begin{figure}[h]
 \includegraphics[width = .48 \textwidth]{images/aufbau.pdf}
 \caption{Set-up of the experiment \citep{wiki}}
 \label{fig:experiment}
 \end{figure}
+
 \section{Description of measurement}
 The experiment was started with a already evacuated cavity (Analog manometer on lowest position)
-To adjust the system we replaced the laser for the experiment with a green laser. The green laser was chosen as the mirrors in the cavity are less reflective for green light and the green light is easier to see with the eyes. By changing the position of the screws the position and the vertical angle was changed in a way that the laser hits all of the iris diaphragm centrally. In a next step the laser that exits the cavity was centralised and afterwards with the position of the mirrors the reflection of the laser was tried to overlap with the source. After the alignment has led to the desired light path, the green laser was replaced by the violet one with $\lambda=405\si{\nano \meter}$ with whom the measurements were made, as the Rayleigh effect is higher with small $\lambda$ and the mirrors are designed for this wavelength. After a short warm up, the power of the laser could be regulated at the computer and was set to 2mW for the adjustments. As the position of the beam of the violet laser is not at the same position as the green one, the adjustments of its position had to be repeated while letting the position of the mirrors untouched.
+To adjust the system we used the green laser. The green laser was chosen as the mirrors in the cavity are less reflective for green light and the green light is easier to see with the eyes. The set-up was adjusted by changing the position and the vertical angle of the laser until the laser hits every iris diaphragm centrally. In a next step the laserbeam that exits the cavity was centralised and afterwards the reflection of the laser was tried to overlap with the source by changing the position of the mirrors. After the alignment has led to the desired light path, the green laser was replaced by the violet one with $\lambda=405\si{\nano \meter}$ with whom the measurements were made, as the Rayleigh effect is higher with small $\lambda$ and the mirrors are designed for this wavelength. After a short warm up period, the power of the laser could be regulated at the computer and was set to 2mW for the adjustments. As the position of the beam of the violet laser is not at the same position as the green one, the adjustments of its position had to be repeated while letting the position of the mirrors untouched.
 The photomultiplier was switched on and turned to the highest sensitivity. With the screws of the mirrors their direction was changed until the decaying signal was maximised.
 The power of the laser was increased up to $75\si{\milli \watt}$ to be able to decrease the sensitivity of the photomultiplier and to obtain a better signal with less noise.
-On the computer we measured the signal multiple times trying to prolong the decaying times each time. As software we used the software LabView. The values for the decaying times didn't reach the estimated values, even all parameters of the experimental set-up were adjusted that they maximise the decaying time.
-As no greater values for the decay time were reached, the valve of the cavity was opened and atmosphere pressure established. By the changing pressure the position of the mirrors has changed, so it was needed to readjust them with the screws.
+On the computer we measured the signal multiple times trying to prolong the decaying times each time. As software we used the software LabView that was able to show the decaying time very easily. The values for the decaying times didn't reach the estimated values of about $11\cdot 10^{-6}\si{\second}$. The maximum value in the case with vacuum was about $9.5\cdot 10^{-6}\si{\second}$
+As no greater values for the decay time were reached after several readjustments, the valve of the cavity was opened and atmosphere pressure established. By the changing pressure the position of the mirrors has changed, so it was needed to readjust them with the screws.
 New decaying times were measured that were shorter than the measured values we had before which was expected as Rayleigh scattering in the air occurs in this set-up.
 In the end vacuum was re-established to use the resting time to reach longer decaying times. But the measured values didn't exceed the previous values measured in vacuum. 
 Values for temperature and time of each data acquirement can be found in the transcription of the protocol in the annex.
 \section{Evaluation}
 For the evaluation the measured data was imported in Mathematica 10 and analysed by fitting the decaying curve. A notebook is attached to make the results reproducible.
-Measurements in vacuum led to the curve in Fig. \ref{fig:vacuum}. We chose the measurement row with the highest decaying time witch should correspond to the best alignment of mirrors, cavity and laser. 
+Measurements in vacuum led to the curve in Fig. \ref{fig:vacuum}. We chose the measurement row with the highest decaying time which should correspond to the best alignment of mirrors, cavity and laser. 
 \begin{figure}
 \includegraphics[width=\textwidth/2]{images/vacuum.eps}
 \caption{Decaying signal with evacuated cavity - measurement row at 2:43pm}
@@ -222,6 +224,11 @@ Mesurements with air led to the curve that can be seen in Fig. \ref{fig:air}
 \includegraphics[width=\textwidth/2]{images/air.eps}
 \caption{Decaying signal with cavity filled with air at atmosphere pressure - measurement row at 2:50pm}
 \label{fig:air}
+\end{figure}
+\begin{figure}
+\includegraphics[width=\textwidth/2]{images/airvacuum.eps}
+\caption{Both fits: Vacuum in red and the case with air in blue }
+\label{fig:airvacuum}
 \end{figure}
 From the fit, values for the decaying times were determined. The decaying time in vacuum was found at $\tau_0=(9.517\pm0.006)\cdot 10^{-6}s$. The decaying time with air was $\tau=(8.470\pm0.005)\cdot 10^{-6}s$. The error values correspond to the error of finding the fit.
 With the determined values for $\tau$ and $\tau_0$ a value for $\beta$ can be derived from formula \ref{eq:IDec}.
