@@ -137,7 +137,14 @@ give a better understanding of Rayleigh scattering phenomenon in nature.
 \end{center}
 \end{titlepage}
 
-Introduction
+\section{Introduction}
+
+The scattering process is a precess where electromagnetic waves interact with particles and change their direction. By understanding this process one can 
+explain the color of the sky and other interesting phenomena. The Rayleigh-scattering observed in this experiment was first postulated by John William Strutt, 3rd 
+Baron of Rayleigh and was confirmed experimentally later. The greater Theory to describe such phenomena is the Lorenz-Mie-scattering theory, which 
+describes elastic scattering at non-conductive spheres of different sizes. In the case of air-molecules, the scattering strongly depends on the wavelength. 
+
+
 \section{Theoretical Principles}
 
 Rayleigh Scattering is a type of elastic scattering of electromagnetic waves at particles, which are significantly smaller than the wavelength of the photon. 
@@ -202,25 +209,44 @@ To measure the Rayleigh scattering we had a set-up as follows:
 \end{figure}
 
 \section{Description of measurement}
-The experiment was started with a already evacuated cavity (Analog manometer on lowest position)
-To adjust the system we used the green laser. The green laser was chosen as the mirrors in the cavity are less reflective for green light and the green light is easier to see with the eyes. The set-up was adjusted by changing the position and the vertical angle of the laser until the laser hits every iris diaphragm centrally. In a next step the laserbeam that exits the cavity was centralised and afterwards the reflection of the laser was tried to overlap with the source by changing the position of the mirrors. After the alignment has led to the desired light path, the green laser was replaced by the violet one with $\lambda=405\si{\nano \meter}$ with whom the measurements were made, as the Rayleigh effect is higher with small $\lambda$ and the mirrors are designed for this wavelength. After a short warm up period, the power of the laser could be regulated at the computer and was set to 2mW for the adjustments. As the position of the beam of the violet laser is not at the same position as the green one, the adjustments of its position had to be repeated while letting the position of the mirrors untouched.
-The photomultiplier was switched on and turned to the highest sensitivity. With the screws of the mirrors their direction was changed until the decaying signal was maximised.
+The experiment was started with an already evacuated cavity. The quality of the vacuum was observed by an analogue manometer. It was assumed, that a vacuum of sufficient 
+quality was reached, when the indicator of the manometer hit the lowest position possible. 
+To adjust the system we used the green laser. The green laser was chosen as the mirrors in the cavity are less reflective for green light and the green light is easier to 
+see with bare eyes. The set-up was adjusted by changing the position and the vertical angle of the laser until the laser hit every iris diaphragm centrally. In a next step 
+the laserbeam that exits the cavity was centralised and afterwards the reflection of the laser was set to overlap with the source by changing the position of the mirrors. 
+After the alignment has led to the desired light path, the green laser was replaced by the violet one with $\lambda=405\si{\nano \meter}$ with whom the measurements were 
+made, as the Rayleigh effect is higher with small $\lambda$ and the mirrors are optimized for this wavelength. After a short warm up period, the power of the laser could be 
+regulated at the computer and was set to 2mW for the adjustments. As the position of the beam of the violet laser is not at the same position as the green one, the 
+adjustments of its position had to be repeated while letting the position of the mirrors untouched.
+
+The photomultiplier was switched on and turned to the highest sensitivity. With the adjustment-screws of the mirrors their direction was changed until the decaying time 
+which could be observed via the oscilloscope was maximal.
+
 The power of the laser was increased up to $75\si{\milli \watt}$ to be able to decrease the sensitivity of the photomultiplier and to obtain a better signal with less noise.
-On the computer we measured the signal multiple times trying to prolong the decaying times each time. As software we used the software LabView that was able to show the decaying time very easily. The values for the decaying times didn't reach the estimated values of about $11\cdot 10^{-6}\si{\second}$. The maximum value in the case with vacuum was about $9.5\cdot 10^{-6}\si{\second}$
-As no greater values for the decay time were reached after several readjustments, the valve of the cavity was opened and atmosphere pressure established. By the changing pressure the position of the mirrors has changed, so it was needed to readjust them with the screws.
+On the computer we measured the signal multiple times trying to prolong the decaying times each time. As software we used LabView that was able to show the decaying time 
+very easily. The values for the decaying times didn't reach the estimated values of about $11\cdot 10^{-6}\si{\second}$. The maximum value in the case with vacuum was 
+at about $9.5\cdot 10^{-6}\si{\second}$.
+As no greater values for the decay time were reached after several readjustments, the valve of the cavity was opened and atmosphere pressure established with filtered air. 
+By the changing pressure the position of the mirrors has changed, so it was needed to readjust them with the adjustment-screws.
 New decaying times were measured that were shorter than the measured values we had before which was expected as Rayleigh scattering in the air occurs in this set-up.
-In the end vacuum was re-established to use the resting time to reach longer decaying times. But the measured values didn't exceed the previous values measured in vacuum. 
-Values for temperature and time of each data acquirement can be found in the transcription of the protocol in the annex.
+In the end vacuum was re-established to use the resting time to reach longer ring-down-times. But the measured values didn't exceed the previous values measured in 
+vacuum. Values for temperature and time of each data acquirement can be found in the transcription of the protocol in the annex.
+
+
 \section{Evaluation}
 For the evaluation the measured data was imported in Mathematica 10 and analysed by fitting the decaying curve. A notebook is attached to make the results reproducible.
-Measurements in vacuum led to the curve in Fig. \ref{fig:vacuum}. We chose the measurement row with the highest decaying time which should correspond to the best alignment of mirrors, cavity and laser. 
-\begin{figure}
+Measurements in vacuum led to the curve in Fig. \ref{fig:vacuum}. We chose the measurement row with the highest decaying time which should correspond to the best alignment 
+of mirrors, cavity and laser. 
+
+\begin{figure}[h]
 \includegraphics[width=\textwidth/2]{images/vacuum.eps}
 \caption{Decaying signal with evacuated cavity - measurement row at 2:43pm}
 \label{fig:vacuum}
 \end{figure}
+
 Mesurements with air led to the curve that can be seen in Fig. \ref{fig:air}
-\begin{figure}
+
+\begin{figure}[hb]
 \includegraphics[width=\textwidth/2]{images/air.eps}
 \caption{Decaying signal with cavity filled with air at atmosphere pressure - measurement row at 2:50pm}
 \label{fig:air}
@@ -230,19 +256,26 @@ Mesurements with air led to the curve that can be seen in Fig. \ref{fig:air}
 \caption{Both fits: Vacuum in red and the case with air in blue }
 \label{fig:airvacuum}
 \end{figure}
-From the fit, values for the decaying times were determined. The decaying time in vacuum was found at $\tau_0=(9.517\pm0.006)\cdot 10^{-6}s$. The decaying time with air was $\tau=(8.470\pm0.005)\cdot 10^{-6}s$. The error values correspond to the error of finding the fit.
+
+From the fit, values for the decaying times were determined. Both fits together can be seen in figure \ref{fig:airvacuum}.
+The decaying time in vacuum was found at $\tau_0=(9.517\pm0.006)\cdot 10^{-6}s$. The decaying time with 
+air is $\tau=(8.470\pm0.005)\cdot 10^{-6}s$. The error values correspond to the error of finding the fit. 
 With the determined values for $\tau$ and $\tau_0$ a value for $\beta$ can be derived from formula \ref{eq:IDec}.
+
 \begin{align}
 \beta=\frac{1}{c}\left(\frac{1}{\tau}-\frac{1}{\tau_0}\right)=(4.328\pm0.032)\cdot 10^{-5}\si{\meter}^{-1}
 \end{align}
-Calculation of the theoretical value of $\beta$ with formula \ref{eq:betatheo} needs values for $n$ and $N$. Refraction index $n$ was calculated using the modified Edlén equation which leads, using the measured values for p and T and an estimated relative humidity of $50\%$, to a value of $n=1.00028152$\cite{edlen}
+Calculation of the theoretical value of $\beta$ with formula \ref{eq:betatheo} needs values for $n$ and $N$. Refraction index $n$ was calculated using the modified 
+Edlén equation which leads, using the measured values for p and T and an estimated relative humidity of $50\%$, to a value of $n=1.00028152$\cite{edlen}
 The number of particles per cubic meter was determined using the ideal gas equation:
 \begin{align}
 N=\frac{p}{k_B\cdot T}
 \end{align}
+
 \begin{align}
-\beta &= \frac{8\cdot \pi^3\cdot (n^2-1)^2}{3 N \lambda^4}=(3.834\pm0.013)\cdot 10^{-5}\si{\meter}^{-1}
+\beta &= \frac{8\cdot \pi^3\cdot (n^2-1)^2}{3 N \lambda^4} \\ & =(3.834\pm0.013)\cdot 10^{-5}\si{\meter}^{-1}
 \end{align}
+
 \section{Summary and Discussion}
 Decaying times were determined through fitting the intensity decay after each laser pulse. 
 In vaccuum:
@@ -262,18 +295,22 @@ The theoretical value for the scattering factor is
 \beta=(3.83\pm0.02)\cdot 10^{-5}\si{\meter}^{-1}
 \end{align}
 The order of magnitude is the same, but taking only the uncertainty of the fit into account the values are significantly different.
-The highest error comes from the alignment of the experimental set-up. Already small changes result in different decaying values. In our case the deviation of the experimental value is very likely caused by a better optimized alignment for vacuum as for the set-up with air. As the alignment changes when atmosphere pressure is re-established in the cavity, the alignment has to be readjusted and therefore is not the same.
-The sensibility to the adjustment can be observed when fitting other measuring rows. Even negative $\beta$ can be obtained or scattering factors of $\beta\approx 6 \cdot 10^-5\si{\meter}^{-1}$
+The highest error comes from the alignment of the experimental set-up. Already small changes result in different decaying values. In our case the deviation of the 
+experimental value is very likely caused by a better optimized alignment for vacuum as for the set-up with air. As the alignment changes when atmosphere pressure is 
+re-established in the cavity, the alignment has to be readjusted and therefore is not the same.
+The sensibility to the adjustment can be observed when fitting other measuring rows. Even negative $\beta$ can be obtained or scattering factors of 
+$\beta\approx 6 \cdot 10^-5\si{\meter}^{-1}$
 This stresses the importance of optimizing both cases equally.
 
-The conclusion that could be drawn is, that the experiment is suitable to get an idea of the order of magnitude of the scattering factor. For measuring exact values, a way has to be found to ensure that measurements take place under same conditions.
+The conclusion that could be drawn is, that the experiment is suitable to get an idea of the order of magnitude of the scattering factor. For measuring exact values, a 
+way has to be found to ensure that measurements take place under same conditions.
 
 \section{Protocol}
 Times correspond to the computer time which had a difference of 15min to realtime.
 
 Temperature: $T=(18.5\pm 0.5)^\circ C$
 
-atmosphere pressure: $p=1023.4\si{\hecto \pascal}$\cite{wetter}
+Atmosphere pressure: $p=1023.4\si{\hecto \pascal}$\cite{wetter}
 
 The values were measured/looked up at the beginning of the experiment.
 
